@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,6 +38,15 @@
                                     <constraint firstAttribute="width" constant="240" id="rjq-wx-hyH"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THEFLAWLESSHACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0v-xm-h5m">
+                                <rect key="frame" x="87" y="189" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="E1y-wI-24l"/>
+                                    <constraint firstAttribute="height" constant="30" id="Mu3-vn-MRR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
@@ -44,6 +54,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ye6-IZ-8Fw" secondAttribute="bottom" constant="20" id="FEB-jH-5T4"/>
                             <constraint firstItem="h5k-ph-QPJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a2S-gO-BB4"/>
                             <constraint firstItem="h5k-ph-QPJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aAN-Vn-OfP"/>
+                            <constraint firstItem="r0v-xm-h5m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEx-Lo-a0L"/>
+                            <constraint firstItem="h5k-ph-QPJ" firstAttribute="top" secondItem="r0v-xm-h5m" secondAttribute="bottom" constant="50" id="piJ-ac-f4r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -60,30 +72,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-QA-xpq">
-                                <rect key="frame" x="326" y="614" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-QA-xpq">
+                                <rect key="frame" x="322" y="614" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="ZZ8-HT-n4W"/>
+                                    <constraint firstAttribute="height" constant="33" id="dNf-bN-qbe"/>
+                                </constraints>
                                 <state key="normal" image="forward"/>
                                 <connections>
                                     <segue destination="RUl-4b-7vH" kind="show" id="VGw-KD-oI6"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eQ6-cZ-kfE">
-                                <rect key="frame" x="55" y="114" width="264" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKi-1J-x2s">
+                                <rect key="frame" x="112" y="91.5" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3t7-ug-6gy"/>
+                                    <constraint firstAttribute="width" constant="150" id="WQJ-ma-42r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eQ6-cZ-kfE">
+                                <rect key="frame" x="55" y="174" width="264" height="319"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="qJr-Tl-WLJ"/>
+                                    <constraint firstAttribute="width" constant="264" id="yh6-Xb-lbQ"/>
+                                </constraints>
+                                <string key="text">THEFLAWLESSHACK is a Computer Engineering Student at New York University in addition to being a freelance iOS Developer. She is passionate about alternative realities (augmented, virtual, mixed reality). THEFLAWLESSHACK enjoys working out and creating in her spare time. Whether she is building apps or creating 3D models, creating is at her core.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKi-1J-x2s">
-                                <rect key="frame" x="155" y="69" width="64" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="eQ6-cZ-kfE" firstAttribute="centerX" secondItem="Huu-aS-Blu" secondAttribute="centerX" id="2TJ-VQ-Q4g"/>
+                            <constraint firstItem="uKi-1J-x2s" firstAttribute="centerX" secondItem="Huu-aS-Blu" secondAttribute="centerX" id="7fK-9I-0xc"/>
+                            <constraint firstItem="uKi-1J-x2s" firstAttribute="centerY" secondItem="Huu-aS-Blu" secondAttribute="centerY" multiplier="0.35" id="G9W-IZ-Y51"/>
+                            <constraint firstItem="d80-Tp-ryp" firstAttribute="trailing" secondItem="fJP-QA-xpq" secondAttribute="trailing" constant="20" id="GgX-Xe-dcc"/>
+                            <constraint firstItem="d80-Tp-ryp" firstAttribute="bottom" secondItem="fJP-QA-xpq" secondAttribute="bottom" constant="20" id="NNK-nc-i2A"/>
+                            <constraint firstItem="eQ6-cZ-kfE" firstAttribute="centerY" secondItem="Huu-aS-Blu" secondAttribute="centerY" id="tED-p5-2wK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d80-Tp-ryp"/>
                     </view>
                 </viewController>
@@ -99,28 +129,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-PC-fNa">
-                                <rect key="frame" x="16" y="614" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-PC-fNa">
+                                <rect key="frame" x="20" y="614" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="D7R-PJ-Kex"/>
+                                    <constraint firstAttribute="height" constant="33" id="Ecr-eg-LXt"/>
+                                </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <segue destination="R5r-46-Tgc" kind="show" id="7CV-aG-c4v"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SG3-l6-NoT">
-                                <rect key="frame" x="55" y="328" width="264" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="vke-BO-e9m">
-                                <rect key="frame" x="55" y="111" width="264" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="7If-rp-xM9">
+                                <rect key="frame" x="55" y="165" width="264" height="337"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="vke-BO-e9m">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="rbh-i2-Sq5"/>
+                                            <constraint firstAttribute="width" constant="264" id="vq6-gS-iho"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="THEFLAWLESSHACK is also known as Jessica Joseph. A 21 year old NYC native Haitian artist." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SG3-l6-NoT">
+                                        <rect key="frame" x="0.0" y="237" width="264" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="264" id="Bx1-M6-QiO"/>
+                                            <constraint firstAttribute="height" constant="100" id="sAt-qK-3qh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="7If-rp-xM9" firstAttribute="centerX" secondItem="KgF-b9-aix" secondAttribute="centerX" id="NbM-S8-Pd7"/>
+                            <constraint firstItem="7If-rp-xM9" firstAttribute="centerY" secondItem="KgF-b9-aix" secondAttribute="centerY" id="Wcy-2q-knU"/>
+                            <constraint firstItem="fE3-sK-l4e" firstAttribute="bottom" secondItem="lC4-PC-fNa" secondAttribute="bottom" constant="20" id="aE1-oS-7hd"/>
+                            <constraint firstItem="lC4-PC-fNa" firstAttribute="leading" secondItem="fE3-sK-l4e" secondAttribute="leading" constant="20" id="mcs-Y3-HmH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fE3-sK-l4e"/>
                     </view>
                 </viewController>
@@ -139,6 +188,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WLG-aA-4yn"/>
+        <segue reference="VGw-KD-oI6"/>
+        <segue reference="7CV-aG-c4v"/>
     </inferredMetricsTieBreakers>
 </document>
