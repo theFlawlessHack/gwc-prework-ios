@@ -2,11 +2,13 @@
 //  Copyright © 2018 TFH. All rights reserved.
 
 import UIKit
+import WebKit
 
-class ThoughtsController: UIViewController {
+class ThoughtsController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var thoughtLabel: UILabel!
     @IBOutlet weak var thoughtButton: UIButton!
+    @IBOutlet weak var websiteButton: UIButton!
     
     let thoughts = ["I could go for some pizza.", "YASSSS", "C++ is BAE!", "Grind grind grind", "iS tHis hOw iT's DoNe?"]
     
@@ -15,6 +17,7 @@ class ThoughtsController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         thoughtButton.layer.cornerRadius = thoughtButton.layer.frame.size.height / 2
+        websiteButton.layer.cornerRadius = websiteButton.layer.frame.size.height / 2
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +30,4 @@ class ThoughtsController: UIViewController {
         
         thoughtLabel.text = thoughts[Int(arc4random_uniform(UInt32(thoughts.count)))]
     }
-    
 }
-

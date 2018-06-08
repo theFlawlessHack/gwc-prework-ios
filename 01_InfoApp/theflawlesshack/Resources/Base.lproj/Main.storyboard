@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="theflawlesshack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="theflawlesshack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--View Controller-->
         <scene sceneID="kXv-Ud-86K">
             <objects>
-                <viewController id="R5r-46-Tgc" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="R5r-46-Tgc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Huu-aS-Blu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
         <!--View Controller-->
         <scene sceneID="kJz-gx-SvC">
             <objects>
-                <viewController id="RUl-4b-7vH" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="RUl-4b-7vH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KgF-b9-aix">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,28 +217,16 @@
         <!--Thoughts Controller-->
         <scene sceneID="7OZ-IB-MWx">
             <objects>
-                <viewController id="vd4-td-WKQ" customClass="ThoughtsController" customModule="theflawlesshack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="vd4-td-WKQ" customClass="ThoughtsController" customModule="theflawlesshack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6y-et-Xki">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-lN-fuY">
-                                <rect key="frame" x="79.5" y="313.5" width="215" height="40"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="97t-du-15T"/>
-                                    <constraint firstAttribute="width" constant="215" id="KPs-RK-DY4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
-                                <state key="normal" title="Generate a TFH Thought">
-                                    <color key="titleColor" red="1" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="generateThought:" destination="vd4-td-WKQ" eventType="touchUpInside" id="6ox-bB-vcR"/>
-                                </connections>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3px-kJ-OXQ">
-                                <rect key="frame" x="164.5" y="266" width="45.5" height="17.5"/>
+                                <rect key="frame" x="165" y="206" width="45.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iqI-zK-sR8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -253,26 +241,109 @@
                                     <segue destination="RUl-4b-7vH" kind="show" id="col-LS-hMW"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="sEj-Dy-NzY">
+                                <rect key="frame" x="80" y="281" width="215" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-lN-fuY">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="97t-du-15T"/>
+                                            <constraint firstAttribute="width" constant="215" id="KPs-RK-DY4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                        <state key="normal" title="Generate a TFH Thought">
+                                            <color key="titleColor" red="1" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="generateThought:" destination="vd4-td-WKQ" eventType="touchUpInside" id="6ox-bB-vcR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aG-pz-fH8">
+                                        <rect key="frame" x="0.0" y="65" width="215" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="215" id="DSm-Ix-be6"/>
+                                            <constraint firstAttribute="height" constant="40" id="lSh-CY-Cfk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                        <state key="normal" title="Check out my website">
+                                            <color key="titleColor" red="1" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dPV-bQ-rnJ" kind="show" id="cQF-BN-ggT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
-                            <constraint firstItem="Rew-lN-fuY" firstAttribute="centerY" secondItem="E6y-et-Xki" secondAttribute="centerY" id="1bY-66-y0B"/>
-                            <constraint firstItem="Rew-lN-fuY" firstAttribute="top" secondItem="3px-kJ-OXQ" secondAttribute="bottom" constant="30" id="Abi-uv-CRc"/>
                             <constraint firstItem="bBs-ha-Ran" firstAttribute="leading" secondItem="0ul-aB-sxl" secondAttribute="leading" constant="20" id="FGJ-WQ-JVZ"/>
-                            <constraint firstItem="Rew-lN-fuY" firstAttribute="centerX" secondItem="E6y-et-Xki" secondAttribute="centerX" id="Oyv-kK-etN"/>
+                            <constraint firstItem="sEj-Dy-NzY" firstAttribute="centerX" secondItem="E6y-et-Xki" secondAttribute="centerX" id="Kz4-d0-YKA"/>
+                            <constraint firstItem="3px-kJ-OXQ" firstAttribute="centerX" secondItem="E6y-et-Xki" secondAttribute="centerX" id="LtO-lo-qRu"/>
+                            <constraint firstItem="sEj-Dy-NzY" firstAttribute="centerY" secondItem="E6y-et-Xki" secondAttribute="centerY" id="NcJ-Wa-vLm"/>
+                            <constraint firstItem="sEj-Dy-NzY" firstAttribute="top" secondItem="3px-kJ-OXQ" secondAttribute="bottom" constant="25" id="Qwl-vl-sMv"/>
                             <constraint firstItem="0ul-aB-sxl" firstAttribute="bottom" secondItem="bBs-ha-Ran" secondAttribute="bottom" constant="20" id="TdL-is-5f7"/>
-                            <constraint firstItem="3px-kJ-OXQ" firstAttribute="centerX" secondItem="E6y-et-Xki" secondAttribute="centerX" id="maj-nw-QgD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0ul-aB-sxl"/>
                     </view>
                     <connections>
                         <outlet property="thoughtButton" destination="Rew-lN-fuY" id="s57-h8-szH"/>
                         <outlet property="thoughtLabel" destination="3px-kJ-OXQ" id="xTj-SP-tfO"/>
+                        <outlet property="websiteButton" destination="6aG-pz-fH8" id="1Zc-ur-6Uc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnE-Z1-xjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2120.8000000000002" y="135.38230884557723"/>
+        </scene>
+        <!--Website Controller-->
+        <scene sceneID="Gvl-V1-aaF">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="dPV-bQ-rnJ" customClass="WebsiteController" customModule="theflawlesshack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n2O-yd-mi3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZu-rm-8dJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX0-0p-tTf">
+                                <rect key="frame" x="20" y="614" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="oN4-gn-7BO"/>
+                                    <constraint firstAttribute="width" constant="33" id="puV-g1-Yes"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <segue destination="vd4-td-WKQ" kind="show" id="9BZ-hZ-NC0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="XZu-rm-8dJ" firstAttribute="leading" secondItem="yy9-4v-Uxj" secondAttribute="leading" id="4Dn-tC-kRY"/>
+                            <constraint firstItem="fX0-0p-tTf" firstAttribute="leading" secondItem="yy9-4v-Uxj" secondAttribute="leading" constant="20" id="OZS-1h-PTQ"/>
+                            <constraint firstAttribute="bottom" secondItem="XZu-rm-8dJ" secondAttribute="bottom" id="SqY-t8-qvw"/>
+                            <constraint firstItem="yy9-4v-Uxj" firstAttribute="bottom" secondItem="fX0-0p-tTf" secondAttribute="bottom" constant="20" id="Tzq-W5-ZDw"/>
+                            <constraint firstItem="yy9-4v-Uxj" firstAttribute="trailing" secondItem="XZu-rm-8dJ" secondAttribute="trailing" id="gY6-5U-mqI"/>
+                            <constraint firstItem="XZu-rm-8dJ" firstAttribute="top" secondItem="yy9-4v-Uxj" secondAttribute="top" constant="-20" id="zjM-ls-3bB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yy9-4v-Uxj"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="XZu-rm-8dJ" id="R4O-Tv-ZD7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqM-bM-r5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2840.8000000000002" y="131.78410794602701"/>
         </scene>
     </scenes>
     <resources>
@@ -288,7 +359,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="col-LS-hMW"/>
+        <segue reference="9BZ-hZ-NC0"/>
+        <segue reference="VGw-KD-oI6"/>
         <segue reference="WLG-aA-4yn"/>
     </inferredMetricsTieBreakers>
 </document>
