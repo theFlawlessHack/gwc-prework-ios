@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var answer1: UIButton!
     @IBOutlet weak var answer2: UIButton!
     @IBOutlet weak var answer3: UIButton!
-
+    
+    @IBOutlet weak var progressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

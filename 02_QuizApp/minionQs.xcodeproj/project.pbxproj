@@ -12,6 +12,7 @@
 		AC7468C120CDBB9E007C62CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7468BF20CDBB9E007C62CA /* Main.storyboard */; };
 		AC7468C320CDBBA0007C62CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC7468C220CDBBA0007C62CA /* Assets.xcassets */; };
 		AC7468C620CDBBA0007C62CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7468C420CDBBA0007C62CA /* LaunchScreen.storyboard */; };
+		AC7468D020CDCBD7007C62CA /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7468CF20CDCBD7007C62CA /* ResultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AC7468C220CDBBA0007C62CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC7468C520CDBBA0007C62CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC7468C720CDBBA0007C62CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC7468CF20CDCBD7007C62CA /* ResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		AC7468BA20CDBB9E007C62CA /* minionQs */ = {
 			isa = PBXGroup;
 			children = (
+				AC7468CE20CDCBAB007C62CA /* Controllers */,
 				AC7468BB20CDBB9E007C62CA /* AppDelegate.swift */,
-				AC7468BD20CDBB9E007C62CA /* ViewController.swift */,
 				AC7468BF20CDBB9E007C62CA /* Main.storyboard */,
 				AC7468C220CDBBA0007C62CA /* Assets.xcassets */,
 				AC7468C420CDBBA0007C62CA /* LaunchScreen.storyboard */,
 				AC7468C720CDBBA0007C62CA /* Info.plist */,
 			);
 			path = minionQs;
+			sourceTree = "<group>";
+		};
+		AC7468CE20CDCBAB007C62CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC7468BD20CDBB9E007C62CA /* ViewController.swift */,
+				AC7468CF20CDCBD7007C62CA /* ResultsController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				AC7468BE20CDBB9E007C62CA /* ViewController.swift in Sources */,
 				AC7468BC20CDBB9E007C62CA /* AppDelegate.swift in Sources */,
+				AC7468D020CDCBD7007C62CA /* ResultsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

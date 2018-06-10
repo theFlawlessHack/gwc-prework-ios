@@ -116,17 +116,19 @@
                         <outlet property="answer1" destination="FWh-fF-HlC" id="kx6-mQ-S41"/>
                         <outlet property="answer2" destination="pKO-Yl-5eK" id="Ylh-WE-QmI"/>
                         <outlet property="answer3" destination="a2U-ZA-I3u" id="8Tn-yP-WPM"/>
+                        <outlet property="progressLabel" destination="utU-tl-BCW" id="xZL-42-ibj"/>
                         <outlet property="questionLabel" destination="XS0-8G-eoW" id="GcY-y4-feL"/>
+                        <segue destination="xOJ-Du-rCg" kind="show" identifier="sgShowResults" id="bdO-yF-Vjo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="658.92053973013503"/>
         </scene>
-        <!--View Controller-->
+        <!--Results Controller-->
         <scene sceneID="mpW-1n-Qjq">
             <objects>
-                <viewController id="xOJ-Du-rCg" sceneMemberID="viewController">
+                <viewController id="xOJ-Du-rCg" customClass="ResultsController" customModule="minionQs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODu-4Z-GD4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +184,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Er-Qj-4IG"/>
                     </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="Tig-YU-AdQ" id="dbN-Kd-Kr3"/>
+                        <outlet property="titleLabel" destination="FZO-03-gp8" id="ag5-4b-fmH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxR-C1-HY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
