@@ -8,14 +8,25 @@ class ResultsController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var resultsLabel: UILabel!
     
+    var numberCorrect: Int = 0
+    var total: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        resultsLabel.text = "You got \(numberCorrect) out of \(total)"
+        
+        let percentageRight = (Double(numberCorrect)/Double(total)) * 100
+        var title = ""
+        
+        if percentageRight < 40 {
+            title = "That was no good 😕"
+        } else if percentageRight < 75 {
+            title = "Not bad 🙂"
+        } else {
+            title = "Great job 😃"
+        }
+        
+        titleLabel.text = title
     }
 }
