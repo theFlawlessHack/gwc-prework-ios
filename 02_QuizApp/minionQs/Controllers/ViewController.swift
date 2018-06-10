@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct Question {
+    let question: String
+    let answers: [String]
+    let correntAnswer: Int
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
@@ -18,6 +24,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var answer3: UIButton!
     
     @IBOutlet weak var progressLabel: UILabel!
+    
+    var questions: [Question] = [
+        Question(question: "What is a Minions' favorite food?", answers: ["ice cream", "bananas", "pizza", "bread"], correntAnswer: 1),
+        Question(question: "How many fingers do Minions have?", answers: ["Five", "One", "Four", "Three"], correntAnswer: 3),
+        Question(question: "What color are evil Minions?", answers: ["Purple", "Orange", "Yellow", "Blue"], correntAnswer: 0)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

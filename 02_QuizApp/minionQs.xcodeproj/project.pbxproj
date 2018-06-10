@@ -56,6 +56,7 @@
 		AC7468BA20CDBB9E007C62CA /* minionQs */ = {
 			isa = PBXGroup;
 			children = (
+				AC7468D120CDCD10007C62CA /* Models */,
 				AC7468CE20CDCBAB007C62CA /* Controllers */,
 				AC7468BB20CDBB9E007C62CA /* AppDelegate.swift */,
 				AC7468BF20CDBB9E007C62CA /* Main.storyboard */,
@@ -73,6 +74,13 @@
 				AC7468CF20CDCBD7007C62CA /* ResultsController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC7468D120CDCD10007C62CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
