@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhU-TU-oi1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,6 +13,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="1dQ-bo-Lbx">
+            <objects>
+                <viewController id="zhU-TU-oi1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xem-sr-7Yo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-gG-Ihq">
+                                <rect key="frame" x="142.5" y="467" width="90" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3iy-Tr-CDy"/>
+                                    <constraint firstAttribute="width" constant="90" id="XKY-bh-7b4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitAnswer0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ij4-EK-wyk"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="OKj-Aq-524"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minion Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eV-rr-OyD">
+                                <rect key="frame" x="143" y="316" width="89.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dur-VY-9Ay"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test how well you know Minions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8E-pA-XBx">
+                                <rect key="frame" x="87.5" y="372" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AAN-Tj-GzY"/>
+                                    <constraint firstAttribute="height" constant="25" id="WDD-GS-oG4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-Hh-8Mk">
+                                <rect key="frame" x="67.5" y="146" width="240" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2Xx-yx-QXW"/>
+                                    <constraint firstAttribute="height" constant="130" id="gvp-S4-34d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="Rvu-Hh-8Mk" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="3LA-9a-SyH"/>
+                            <constraint firstItem="3eV-rr-OyD" firstAttribute="top" secondItem="Rvu-Hh-8Mk" secondAttribute="bottom" constant="40" id="5ND-1j-zs4"/>
+                            <constraint firstItem="CrA-gG-Ihq" firstAttribute="top" secondItem="l8E-pA-XBx" secondAttribute="bottom" constant="70" id="6sD-NG-IMg"/>
+                            <constraint firstItem="3eV-rr-OyD" firstAttribute="centerY" secondItem="Xem-sr-7Yo" secondAttribute="centerY" id="JCH-DT-2xS"/>
+                            <constraint firstItem="3eV-rr-OyD" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="Y3Y-k1-hpi"/>
+                            <constraint firstItem="l8E-pA-XBx" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="dzw-B3-LBX"/>
+                            <constraint firstItem="l8E-pA-XBx" firstAttribute="top" secondItem="3eV-rr-OyD" secondAttribute="bottom" constant="21" id="h74-9G-MPS"/>
+                            <constraint firstItem="CrA-gG-Ihq" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="vaI-YI-YXT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sJd-Nc-g7s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zua-GM-Vwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="668"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -199,7 +268,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="intro" width="1024" height="576"/>
         <image name="logo" width="960" height="640"/>
+        <namedColor name="AccentColor">
+            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="AccentColor">
             <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -219,4 +292,7 @@
             <color red="1" green="0.91200000047683716" blue="0.014999999664723873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OKj-Aq-524"/>
+    </inferredMetricsTieBreakers>
 </document>
