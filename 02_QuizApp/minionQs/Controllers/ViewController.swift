@@ -1,10 +1,5 @@
-//
-//  ViewController.swift
-//  minionQs
-//
 //  Created by Jessica Joseph on 6/10/18.
 //  Copyright © 2018 TFH. All rights reserved.
-//
 
 import UIKit
 
@@ -28,7 +23,8 @@ class ViewController: UIViewController {
     var questions: [Question] = [
         Question(question: "What is a Minions' favorite food?", answers: ["ice cream", "bananas", "pizza", "bread"], correntAnswer: 1),
         Question(question: "How many fingers do Minions have?", answers: ["Five", "One", "Four", "Three"], correntAnswer: 3),
-        Question(question: "What color are evil Minions?", answers: ["Purple", "Orange", "Yellow", "Blue"], correntAnswer: 0)
+        Question(question: "What color are evil Minions?", answers: ["Purple", "Orange", "Yellow", "Blue"], correntAnswer: 0),
+        Question(question: "What do Minions wear?", answers: ["a dress", "pants and a shirt", "overalls", "pants and a skirt"], correntAnswer: 2)
     ]
     
     var currentQuestion: Question?
