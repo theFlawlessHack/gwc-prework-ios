@@ -22,6 +22,10 @@ class FoodRandomizerController: UIViewController {
         setFoodItem()
     }
     
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        setFoodItem()
+    }
+    
     func setFoodItem() {
         foodImageView.image = UIImage(named: foodItems[Int(arc4random_uniform(UInt32(foodItems.count)))])
     }
