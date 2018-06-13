@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GET STUFF DONE-->
+        <!--TO DO-->
         <scene sceneID="11O-O5-Qgf">
             <objects>
                 <tableViewController id="pDE-RX-fNk" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="pDE-RX-fNk" id="3Pz-ph-eIr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="GET STUFF DONE" id="lac-KO-qXi">
+                    <navigationItem key="navigationItem" title="TO DO" id="lac-KO-qXi">
                         <barButtonItem key="rightBarButtonItem" image="Add" id="tk5-aR-sOI">
                             <connections>
                                 <segue destination="8hN-1T-zYn" kind="show" id="4xu-Bf-unY"/>
@@ -46,21 +46,51 @@
             </objects>
             <point key="canvasLocation" x="263" y="-1"/>
         </scene>
-        <!--View Controller-->
+        <!--NEW ITEM-->
         <scene sceneID="7cE-CJ-eLj">
             <objects>
-                <viewController id="8hN-1T-zYn" sceneMemberID="viewController">
+                <viewController title="NEW ITEM" id="8hN-1T-zYn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Afs-VW-1MV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNi-hf-RxG">
+                                <rect key="frame" x="112.5" y="250.5" width="150" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zq5-L6-Y9s"/>
+                                    <constraint firstAttribute="width" constant="150" id="o84-IE-ojT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                <state key="normal" title="Add New Item">
+                                    <color key="titleColor" name="MainColor"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type the item you want to add" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5c-hd-itB">
+                                <rect key="frame" x="62" y="155.5" width="250" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="I4n-I7-vxA"/>
+                                    <constraint firstAttribute="width" constant="250" id="v2X-yF-K1X"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" name="MainColor"/>
                         <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="ZNi-hf-RxG" firstAttribute="centerY" secondItem="Afs-VW-1MV" secondAttribute="centerY" id="UQX-GC-lql"/>
+                            <constraint firstItem="d5c-hd-itB" firstAttribute="centerX" secondItem="Afs-VW-1MV" secondAttribute="centerX" id="gPg-As-vmo"/>
+                            <constraint firstItem="ZNi-hf-RxG" firstAttribute="centerX" secondItem="Afs-VW-1MV" secondAttribute="centerX" id="uzB-aF-fsx"/>
+                            <constraint firstItem="ZNi-hf-RxG" firstAttribute="top" secondItem="d5c-hd-itB" secondAttribute="bottom" constant="30" id="zpf-iL-JJH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MRG-Vk-tOP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byo-Fa-TbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-4"/>
+            <point key="canvasLocation" x="972" y="-4.0479760119940034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Atw-ZL-UWn">
@@ -88,10 +118,13 @@
     <resources>
         <image name="Add" width="16" height="16"/>
         <namedColor name="AccentColor">
-            <color red="0.039000000804662704" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95599997043609619" green="0.29199999570846558" blue="0.42199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainColor">
-            <color red="0.90700000524520874" green="0.55400002002716064" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95099997520446777" green="0.92900002002716064" blue="0.625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.95099997520446777" green="0.92900002002716064" blue="0.625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
