@@ -1,14 +1,9 @@
-//
-//  ViewController.swift
-//  manje
-//
 //  Created by Jessica Joseph on 6/13/18.
 //  Copyright © 2018 TFH. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
