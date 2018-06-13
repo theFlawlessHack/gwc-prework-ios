@@ -11,22 +11,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TO DO-->
+        <!--List Controller-->
         <scene sceneID="11O-O5-Qgf">
             <objects>
-                <tableViewController id="pDE-RX-fNk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eoh-tS-OcH">
+                <tableViewController id="pDE-RX-fNk" userLabel="List Controller" customClass="MainTableController" customModule="getStuffDone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eoh-tS-OcH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="MainColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fcj-FL-gPu">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="75" id="fcj-FL-gPu">
+                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fcj-FL-gPu" id="uVn-bO-MwY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="MainColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,12 +45,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcI-RJ-7dr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263" y="-1"/>
+            <point key="canvasLocation" x="261.60000000000002" y="-1.3493253373313345"/>
         </scene>
-        <!--NEW ITEM-->
+        <!--Input Controller-->
         <scene sceneID="7cE-CJ-eLj">
             <objects>
-                <viewController title="NEW ITEM" id="8hN-1T-zYn" sceneMemberID="viewController">
+                <viewController title="NEW ITEM" id="8hN-1T-zYn" userLabel="Input Controller" customClass="InputController" customModule="getStuffDone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Afs-VW-1MV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +66,9 @@
                                 <state key="normal" title="Add New Item">
                                     <color key="titleColor" name="MainColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNewItem:" destination="8hN-1T-zYn" eventType="touchUpInside" id="SKP-9d-F3h"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type the item you want to add" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5c-hd-itB">
                                 <rect key="frame" x="62" y="155.5" width="250" height="65"/>
@@ -87,10 +91,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MRG-Vk-tOP"/>
                     </view>
+                    <connections>
+                        <outlet property="newItemTextField" destination="d5c-hd-itB" id="Zdm-Gx-YWX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byo-Fa-TbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-4.0479760119940034"/>
+            <point key="canvasLocation" x="926" y="-1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Atw-ZL-UWn">
