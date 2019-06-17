@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhU-TU-oi1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1dQ-bo-Lbx">
+            <objects>
+                <viewController id="zhU-TU-oi1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xem-sr-7Yo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-gG-Ihq">
+                                <rect key="frame" x="142.5" y="467" width="90" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3iy-Tr-CDy"/>
+                                    <constraint firstAttribute="width" constant="90" id="XKY-bh-7b4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitAnswer0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ij4-EK-wyk"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="OKj-Aq-524"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minion Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eV-rr-OyD">
+                                <rect key="frame" x="143" y="316" width="89.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dur-VY-9Ay"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test how well you know Minions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8E-pA-XBx">
+                                <rect key="frame" x="87.5" y="372" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AAN-Tj-GzY"/>
+                                    <constraint firstAttribute="height" constant="25" id="WDD-GS-oG4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-Hh-8Mk">
+                                <rect key="frame" x="67.5" y="146" width="240" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2Xx-yx-QXW"/>
+                                    <constraint firstAttribute="height" constant="130" id="gvp-S4-34d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="Rvu-Hh-8Mk" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="3LA-9a-SyH"/>
+                            <constraint firstItem="3eV-rr-OyD" firstAttribute="top" secondItem="Rvu-Hh-8Mk" secondAttribute="bottom" constant="40" id="5ND-1j-zs4"/>
+                            <constraint firstItem="CrA-gG-Ihq" firstAttribute="top" secondItem="l8E-pA-XBx" secondAttribute="bottom" constant="70" id="6sD-NG-IMg"/>
+                            <constraint firstItem="3eV-rr-OyD" firstAttribute="centerY" secondItem="Xem-sr-7Yo" secondAttribute="centerY" id="JCH-DT-2xS"/>
+                            <constraint firstItem="3eV-rr-OyD" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="Y3Y-k1-hpi"/>
+                            <constraint firstItem="l8E-pA-XBx" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="dzw-B3-LBX"/>
+                            <constraint firstItem="l8E-pA-XBx" firstAttribute="top" secondItem="3eV-rr-OyD" secondAttribute="bottom" constant="21" id="h74-9G-MPS"/>
+                            <constraint firstItem="CrA-gG-Ihq" firstAttribute="centerX" secondItem="Xem-sr-7Yo" secondAttribute="centerX" id="vaI-YI-YXT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sJd-Nc-g7s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zua-GM-Vwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="668"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="minionQs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-8G-eoW">
+                                <rect key="frame" x="113.5" y="80" width="148" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kJm-qc-qF6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-F9-Xwe">
+                                <rect key="frame" x="143.5" y="165" width="88" height="164"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BE-Rx-aYR">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="35"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="JRR-Rw-Bmy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                        <state key="normal" title="Answer Choice 0">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitAnswer0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwQ-kY-KtK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWh-fF-HlC">
+                                        <rect key="frame" x="0.0" y="43" width="88" height="35"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="MZo-f6-FRE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                        <state key="normal" title="Answer Choice 1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitAnswer1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KkB-gJ-IRP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKO-Yl-5eK">
+                                        <rect key="frame" x="0.0" y="86" width="88" height="35"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Vzy-ng-Q6K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                        <state key="normal" title="Answer Choice 2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitAnswer2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHr-9F-0Uo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-ZA-I3u">
+                                        <rect key="frame" x="0.0" y="129" width="88" height="35"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="T3c-kS-O96"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                        <state key="normal" title="Answer Choice 3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitAnswer3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="64k-O2-2xe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x/x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utU-tl-BCW">
+                                <rect key="frame" x="180" y="364" width="15.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="lfe-NN-aUx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="XS0-8G-eoW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="G1t-qe-wj2"/>
+                            <constraint firstItem="utU-tl-BCW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mlj-Qh-hKC"/>
+                            <constraint firstItem="aEn-F9-Xwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="al5-Om-MpE"/>
+                            <constraint firstItem="aEn-F9-Xwe" firstAttribute="top" secondItem="XS0-8G-eoW" secondAttribute="bottom" constant="50" id="enX-HO-z91"/>
+                            <constraint firstItem="XS0-8G-eoW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJ5-yq-leZ"/>
+                            <constraint firstItem="utU-tl-BCW" firstAttribute="top" secondItem="aEn-F9-Xwe" secondAttribute="bottom" constant="35" id="u5A-9I-jV9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer0" destination="6BE-Rx-aYR" id="0Uh-la-IgP"/>
+                        <outlet property="answer1" destination="FWh-fF-HlC" id="kx6-mQ-S41"/>
+                        <outlet property="answer2" destination="pKO-Yl-5eK" id="Ylh-WE-QmI"/>
+                        <outlet property="answer3" destination="a2U-ZA-I3u" id="8Tn-yP-WPM"/>
+                        <outlet property="progressLabel" destination="utU-tl-BCW" id="xZL-42-ibj"/>
+                        <outlet property="questionLabel" destination="XS0-8G-eoW" id="GcY-y4-feL"/>
+                        <segue destination="xOJ-Du-rCg" kind="show" identifier="sgShowResults" id="bdO-yF-Vjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="658.92053973013503"/>
+        </scene>
+        <!--Results Controller-->
+        <scene sceneID="mpW-1n-Qjq">
+            <objects>
+                <viewController id="xOJ-Du-rCg" customClass="ResultsController" customModule="minionQs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ODu-4Z-GD4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0tX-43-LKu">
+                                <rect key="frame" x="86.5" y="80" width="240" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Scm-T9-kRc"/>
+                                    <constraint firstAttribute="width" constant="240" id="cHv-oH-2gD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZO-03-gp8">
+                                <rect key="frame" x="153.5" y="270" width="68" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Jpy-gJ-NeL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You got x/x correct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tig-YU-AdQ">
+                                <rect key="frame" x="130" y="340" width="115" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="O5i-40-Cia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-lS-8uc">
+                                <rect key="frame" x="270" y="612" width="85" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="YaZ-9m-FOe"/>
+                                    <constraint firstAttribute="height" constant="35" id="snt-h6-pmQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CjM-UX-vA2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="Tig-YU-AdQ" firstAttribute="top" secondItem="FZO-03-gp8" secondAttribute="bottom" constant="25" id="9Gm-w4-SUH"/>
+                            <constraint firstItem="FZO-03-gp8" firstAttribute="top" secondItem="0tX-43-LKu" secondAttribute="bottom" constant="60" id="U3T-mF-rgP"/>
+                            <constraint firstItem="FZO-03-gp8" firstAttribute="centerX" secondItem="ODu-4Z-GD4" secondAttribute="centerX" id="cef-cB-ynh"/>
+                            <constraint firstItem="5Er-Qj-4IG" firstAttribute="bottom" secondItem="8Df-lS-8uc" secondAttribute="bottom" constant="20" id="dLy-lX-7kl"/>
+                            <constraint firstItem="0tX-43-LKu" firstAttribute="centerX" secondItem="ODu-4Z-GD4" secondAttribute="centerX" multiplier="1.1" id="geA-4f-IxW"/>
+                            <constraint firstItem="Tig-YU-AdQ" firstAttribute="centerX" secondItem="ODu-4Z-GD4" secondAttribute="centerX" id="lN8-a9-v5I"/>
+                            <constraint firstItem="5Er-Qj-4IG" firstAttribute="trailing" secondItem="8Df-lS-8uc" secondAttribute="trailing" constant="20" id="nme-Kp-TZR"/>
+                            <constraint firstItem="0tX-43-LKu" firstAttribute="top" secondItem="5Er-Qj-4IG" secondAttribute="top" constant="60" id="uMR-LK-w3P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Er-Qj-4IG"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="Tig-YU-AdQ" id="dbN-Kd-Kr3"/>
+                        <outlet property="titleLabel" destination="FZO-03-gp8" id="ag5-4b-fmH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LxR-C1-HY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="659"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="intro" width="1024" height="576"/>
+        <image name="logo" width="960" height="640"/>
+        <namedColor name="AccentColor">
+            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.59700000286102295" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="1" green="0.91200000047683716" blue="0.014999999664723873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OKj-Aq-524"/>
+    </inferredMetricsTieBreakers>
+</document>
