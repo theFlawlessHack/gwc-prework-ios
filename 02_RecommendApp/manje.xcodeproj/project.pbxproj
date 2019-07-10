@@ -23,7 +23,7 @@
 		AC1655FA20D1266400F596AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1655FD20D1266400F596AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1655FF20D1266400F596AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB578E0022D54035009B7D9B /* FoodRandomizerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRandomizerController.swift; sourceTree = "<group>"; };
+		BB578E0022D54035009B7D9B /* FoodRandomizerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodRandomizerController.swift; path = ../FoodRandomizerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,6 @@
 				AC16560520D1268A00F596AA /* Controllers */,
 				AC1655F320D1266200F596AA /* AppDelegate.swift */,
 				AC1655FF20D1266400F596AA /* Info.plist */,
-				BB578E0022D54035009B7D9B /* FoodRandomizerController.swift */,
 			);
 			path = manje;
 			sourceTree = "<group>";
@@ -68,6 +67,7 @@
 		AC16560520D1268A00F596AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB578E0022D54035009B7D9B /* FoodRandomizerController.swift */,
 				AC1655F520D1266200F596AA /* MainController.swift */,
 			);
 			path = Controllers;
