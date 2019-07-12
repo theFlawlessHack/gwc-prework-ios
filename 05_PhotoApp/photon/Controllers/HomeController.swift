@@ -25,7 +25,7 @@ class HomeController: UIViewController, UINavigationControllerDelegate {
         let fileManager = FileManager.default
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
         
-        let imageData = UIImagePNGRepresentation(image)
+        let imageData = image.pngData()
         fileManager.createFile(atPath: imagePath as String, contents: imageData, attributes: nil)
     }
 
@@ -42,8 +42,8 @@ class HomeController: UIViewController, UINavigationControllerDelegate {
 }
 
 extension HomeController: UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePickerController.dismiss(animated: true, completion: nil)
-        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
     }
 }

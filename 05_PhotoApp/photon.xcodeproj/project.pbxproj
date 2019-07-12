@@ -13,7 +13,6 @@
 		AC78D15D20D1B71E00CE106D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC78D15C20D1B71D00CE106D /* Assets.xcassets */; };
 		AC78D16020D1B71E00CE106D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC78D15E20D1B71E00CE106D /* LaunchScreen.storyboard */; };
 		AC78D16B20D1BF9D00CE106D /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78D16A20D1BF9D00CE106D /* GalleryController.swift */; };
-		AC78D16E20D1C07B00CE106D /* photon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC78D16C20D1C07B00CE106D /* photon.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		AC78D15F20D1B71E00CE106D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC78D16120D1B71E00CE106D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC78D16A20D1BF9D00CE106D /* GalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryController.swift; sourceTree = "<group>"; };
-		AC78D16D20D1C07B00CE106D /* photon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = photon.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 		AC78D15120D1B71C00CE106D /* photon */ = {
 			isa = PBXGroup;
 			children = (
-				AC78D16C20D1C07B00CE106D /* photon.xcdatamodeld */,
 				AC78D16820D1B74700CE106D /* Resources */,
 				AC78D16720D1B73D00CE106D /* Controllers */,
 				AC78D15220D1B71C00CE106D /* AppDelegate.swift */,
@@ -168,7 +165,6 @@
 				AC78D16B20D1BF9D00CE106D /* GalleryController.swift in Sources */,
 				AC78D15520D1B71C00CE106D /* HomeController.swift in Sources */,
 				AC78D15320D1B71C00CE106D /* AppDelegate.swift in Sources */,
-				AC78D16E20D1C07B00CE106D /* photon.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +317,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.theflawlesshack.photon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -339,7 +335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.theflawlesshack.photon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -366,19 +362,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AC78D16C20D1C07B00CE106D /* photon.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AC78D16D20D1C07B00CE106D /* photon.xcdatamodel */,
-			);
-			currentVersion = AC78D16D20D1C07B00CE106D /* photon.xcdatamodel */;
-			path = photon.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC78D14720D1B71C00CE106D /* Project object */;
 }
