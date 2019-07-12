@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhU-TU-oi1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhU-TU-oi1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -33,7 +32,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitAnswer0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ij4-EK-wyk"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="OKj-Aq-524"/>
                                 </connections>
                             </button>
@@ -82,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="-681" y="668"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="minionQs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuizController" customModule="minionQs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +111,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="submitAnswer0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwQ-kY-KtK"/>
+                                            <action selector="answer0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pO-Vi-cXd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWh-fF-HlC">
@@ -127,7 +125,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="submitAnswer1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KkB-gJ-IRP"/>
+                                            <action selector="answer1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKF-1R-pYW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKO-Yl-5eK">
@@ -141,7 +139,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="submitAnswer2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHr-9F-0Uo"/>
+                                            <action selector="answer2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ka3-z2-vMF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-ZA-I3u">
@@ -155,7 +153,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="submitAnswer3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="64k-O2-2xe"/>
+                                            <action selector="answer3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFV-1R-Ms0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -182,13 +180,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="answer0" destination="6BE-Rx-aYR" id="0Uh-la-IgP"/>
-                        <outlet property="answer1" destination="FWh-fF-HlC" id="kx6-mQ-S41"/>
-                        <outlet property="answer2" destination="pKO-Yl-5eK" id="Ylh-WE-QmI"/>
-                        <outlet property="answer3" destination="a2U-ZA-I3u" id="8Tn-yP-WPM"/>
-                        <outlet property="progressLabel" destination="utU-tl-BCW" id="xZL-42-ibj"/>
-                        <outlet property="questionLabel" destination="XS0-8G-eoW" id="GcY-y4-feL"/>
-                        <segue destination="xOJ-Du-rCg" kind="show" identifier="sgShowResults" id="bdO-yF-Vjo"/>
+                        <outlet property="answer0" destination="6BE-Rx-aYR" id="soV-gH-yoA"/>
+                        <outlet property="answer1" destination="FWh-fF-HlC" id="5zg-sl-94m"/>
+                        <outlet property="answer2" destination="pKO-Yl-5eK" id="Wea-hu-UfW"/>
+                        <outlet property="answer3" destination="a2U-ZA-I3u" id="RPe-md-YDz"/>
+                        <outlet property="progressLabel" destination="utU-tl-BCW" id="Wkg-wy-Zf1"/>
+                        <outlet property="questionLabel" destination="XS0-8G-eoW" id="XzC-ub-x7w"/>
+                        <segue destination="xOJ-Du-rCg" kind="show" identifier="showResults" id="Vut-yt-tIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -271,21 +269,6 @@
         <image name="intro" width="1024" height="576"/>
         <image name="logo" width="960" height="640"/>
         <namedColor name="AccentColor">
-            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AccentColor">
-            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AccentColor">
-            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AccentColor">
-            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AccentColor">
-            <color red="0.59700000289999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AccentColor">
             <color red="0.59700000286102295" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainColor">
@@ -293,6 +276,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OKj-Aq-524"/>
+        <segue reference="CjM-UX-vA2"/>
     </inferredMetricsTieBreakers>
 </document>
