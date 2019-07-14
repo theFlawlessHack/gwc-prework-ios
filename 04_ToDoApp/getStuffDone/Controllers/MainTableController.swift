@@ -59,7 +59,17 @@ class MainTableController: UITableViewController {
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
-        return [delete]
+        
+        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
+            print("hey, you just clicked edit")
+            // TODO: Call Alert controller to update text
+        }
+        
+        return [delete, edit]
+    }
+    
+    func editTableRow() {
+        
     }
     
     /*
