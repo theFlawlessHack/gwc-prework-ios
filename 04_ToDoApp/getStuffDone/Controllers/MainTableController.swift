@@ -7,6 +7,15 @@
 import CoreData
 import UIKit
 
+// MARK: Introduction
+/*
+ The MainTableCotnrller handles the randomizing functionality for this project.
+ Setting and randomizing Food Item Images.
+ 
+ This controller is structured by having a list of food items which are the names of the images within the Assests folder.
+ The names within the array are randomized and then the returned name is used to create an image.
+ This created image is then set as the image for the main image view outlet connection within the storyboard.
+ */
 class MainTableController: UITableViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
