@@ -14,6 +14,9 @@ This repository has been extended to a student resource complete with detailed c
 	* Model Layer
 	* Segue Management and Transferring Data Between Screens
 * Day 4
-	*
+	* Table View
+	* Core Data/App Delegate
 * Day 5
-	* 
+	* File Manager
+	* Image Picker Controller
+	* Protocols
