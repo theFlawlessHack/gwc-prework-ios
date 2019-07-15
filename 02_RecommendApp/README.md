@@ -2,11 +2,10 @@
 
 This is a recommendation based app designed to introduce students to Swift and how to create those teis.
 
-- - - -
 ## Key Lessons
 Within this section, key points to keep in mind to recreate this application.
 
-### UI Connection to Code w/ Outlets and Actions
+### IBOutlets and IBActions
 
 IBOutlets are references made to the code to access an object as if it were a properties. <br>
 Creating an IBOutlet allows the code to reference elements in your app’s UI (like buttons, text fields, images, etc.)<br><br>
