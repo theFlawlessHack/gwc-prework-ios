@@ -5,6 +5,10 @@ This is a recommendation based app designed to introduce students to Swift and h
 ## Key Lessons
 Within this section, key points to keep in mind to recreate this application.
 
+## Code Analysis
+Within this section, files which have a deep code line by line analysis
+* [Food Randomization Controller](https://github.com/thetealpickle/gwc-student-resources/blob/master/02_RecommendApp/manje/Controllers/FoodRandomizerController.swift): Randomly setting an image on a View on button click and by shaking the device
+
 ### IBOutlets and IBActions
 
 IBOutlets are references made to the code to access an object as if it were a properties. <br>
