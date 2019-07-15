@@ -31,6 +31,14 @@ The Code files are structured into groups:
 		* Resources
 			* Assets.xcassets
 			* Storyboards
-		* Views
 		* AppDelegate.swift
 		* Info.plist
+
+## Resources
+Resources for iOS Development and Swift.
+
+#### iOS Development
+* [Ray Wenderlich Site](http://www.raywenderlich.com/)
+
+#### Swift
+* [Apple's Swift Programming Language Interactive Site](https://docs.swift.org/swift-book/)
