@@ -49,18 +49,33 @@ class MainTableController: UITableViewController {
     
     // This method defines the cell to return for the row
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // create a cell from a prototype cell
+        // create a cell from a prototype cell defined on the storyboard
+        // the cell has the identifier associated with the identifier defined for the cell on storyboard
+        // tableviewcell identifiers can be added within the Utilities Pane - Attribute Inspector
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+     
+        // set the default cell text label text to the taskName attribute on the Task object at the position of the indexpath row within the tasks array
+        // for example indexPath row 2 would refer to the Task object at tasks[2]
+        // the property taskName was define in the .xcmodel file as an attribute
         cell.textLabel?.text = tasks[indexPath.row].taskName
-
+        
+        // cell customization complete, returning the cell to be added to the table view 
         return cell
     }
     
+    // This method is called when defining what actions are available for a cell when the user swipes right to left on a cell
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        // creating a delete action
+        // the title that will appear for the action is 'Delete'
+        // within the handler is the action that is associated with this row action option
         let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
+            // access the Task object at the indexpath.row position within the tasks array
             let task = self.tasks[indexPath.row]
+                                                                             
+            // referencing the delete method of the context constant created above and passing in the Task object accessed above
             self.context.delete(task)
             
+            // update the new context state (w/o the deleted Task object) by saving the contexgt directly on the App Delegate                                                               
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             self.tasks.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
@@ -69,11 +84,8 @@ class MainTableController: UITableViewController {
         return [delete]
     }
     
-    func editTableRow() {
-        
-    }
 
- // MARK: Class Methods
+    // MARK: Class Methods
     // getData() retrieves the data from the persistent container as it pertains to the Task model
     func getData() {
         // executing a do-catch to handle the possible error of a failed data fetch 
