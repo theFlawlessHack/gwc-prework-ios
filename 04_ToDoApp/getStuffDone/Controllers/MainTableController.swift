@@ -1,6 +1,9 @@
 //  Created by Jessica Joseph on 6/13/18.
 //  Copyright © 2018 TFH. All rights reserved.
 
+// MARK: Import Frameworks
+// UIKit (User Interface Kit), the Apple provided framework for UI elements
+// CoreData, the Apple provided framework for managing models
 import CoreData
 import UIKit
 

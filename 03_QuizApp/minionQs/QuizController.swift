@@ -1,22 +1,41 @@
-//
-//  QuizController.swift
-//  minionQs
-//
 //  Created by Jessica Joseph on 7/10/19.
 //  Copyright © 2019 TFH. All rights reserved.
-//
 
+// MARK: Import Frameworks
+// UIKit (User Interface Kit), the Apple provided framework for UI elements
 import UIKit
 
-struct Question {
-    var title: String
-    var answers: [String]
-    var correctAnswer: Int
-}
-
+// MARK: Introduction
+/*
+ The QuizController handles the core quiz functionality for this app.
+ Setting Questions, Setting/Showing the Next Question, and Showing the Result Controller once all questions have been answered.
+ 
+ This controller is structured by having a qeustions array which is comprised of an array of Question's.
+ * Witin the controller class, the Question model is defined* There is a variable to the currentQuestion which is used to refer to the current Question model.
+ 
+ Outlets and Actions are created for the number of answer choices available
+ The setQuestion() method updates the view with the current Question model
+ The nextQuestion() method, shows the next question if there is another question to show, otherwise
+ presents the results controller.
+ */
 class QuizController: UIViewController {
 
-    // MARK: Interface Builder Constants
+    // MARK: Internal Model Definitions
+    // Defining the Question model within the QuizController restricts its usage to within this controller
+    // This model could have been defined outside of the QuizController to make it globally available
+    struct Question {
+        // a Question's title is immutable and not able to be changed once set
+        let title: String
+        // a Question has an array of possible answer choice, one of which will be the correct answer
+        var answers: [String]
+        // a Question has a correctAnswer which refers to the position (index) of the correct answer within the answers array
+        var correctAnswer: Int
+        
+        // The design choice to make answer and correctAnswers variables as opposed to constants
+        // allows for hte support of updating the question with additional possible 'wrong' answers after creation and the subsequently updating the corrent answer
+    }
+    
+    // MARK: Interface Builder Variables
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     

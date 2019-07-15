@@ -2,7 +2,6 @@
 
 This is a to do list  app designed to introduce students to Table Views and Core Data.
 
-- - - -
 ## Key Lessons
 Within this section, key points to keep in mind to recreate this application.
 
@@ -33,4 +32,5 @@ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContaine
 ```
 (UIApplication.shared.delegate as! AppDelegate).saveContext()
 ```
-
+### Table View
+A TableView creates a list like view. 

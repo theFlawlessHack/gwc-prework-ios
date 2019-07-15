@@ -1,6 +1,9 @@
 //  Created by Jessica Joseph on 7/9/19.
 //  Copyright © 2019 TFH. All rights reserved.
 
+
+// MARK: Import Frameworks
+// UIKit (User Interface Kit), the Apple provided framework for UI elements
 import UIKit
 
 // MARK: Introduction
