@@ -2,6 +2,10 @@
 
 This is an informational app designed to introduce students to Xcode and setting up screens within a storyboard file.
 
+## Code Analysis
+Within this section, files which have a deep code line by line analysis
+* [GifController](https://github.com/thetealpickle/gwc-student-resources/blob/master/01_InfoApp/infoapp/Controller/GifController.swift): Showing a Gif through a WKWebView
+
 ## Key Lessons
 Within this section, key points to keep in mind to recreate this application.
 
