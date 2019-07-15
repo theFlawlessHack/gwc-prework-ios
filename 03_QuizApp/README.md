@@ -50,7 +50,7 @@ When you create a segue exclusively on storyboard you can extend its management 
 Extending segue management to code is useful when passing data between screens. 
 
 HOW?:
-1. Create your segue from your inital controller view to the next controller view [https://github.com/thetealpickle/gwc-student-resources/tree/master/01_InfoApp#segues]([REFERENCE])
+1. Create your segue from your inital controller view to the next controller view [[REFERENCE]](https://github.com/thetealpickle/gwc-student-resources/tree/master/01_InfoApp#segues)
 2. Click on your segue, the arrow connection between the two screens
 3. In the Utilities Pane - Attributes Inspector give your segue an identifier	
 	* This identifier is how we reference this specific segue within code 
@@ -72,6 +72,6 @@ class FirstController: UIViewController {
 		performSegue(withIdentifier: "COPIED_SEGUE_ID", sender: self)
 	}
 }
-``
+```
 
-A deeper code analysis can found within this project's [](QuizController.swift) file
+A deeper code analysis can found within this project's [QuizController.swift](https://github.com/thetealpickle/gwc-student-resources/blob/master/03_QuizApp/minionQs/QuizController.swift) file
