@@ -47,9 +47,9 @@ class MainTableController: UITableViewController {
         return tasks.count
     }
     
- 
-    
+    // This method defines the cell to return for the row
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // create a cell from a prototype cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].taskName
 
@@ -66,36 +66,38 @@ class MainTableController: UITableViewController {
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
-        
-        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
-            print("hey, you just clicked edit")
-            // TODO: Call Alert controller to update text
-        }
-        
-        return [delete, edit]
+        return [delete]
     }
     
     func editTableRow() {
         
     }
 
- 
- override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) ->     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+ // MARK: Class Methods
+    // getData() retrieves the data from the persistent container as it pertains to the Task model
+    func getData() {
+        // executing a do-catch to handle the possible error of a failed data fetch 
+        do {
+            // try to fetch the data related to the Task model and set that to the tasks variable if the fetch succeeds
+            tasks = try context.fetch(Task.fetchRequest()
+                                      
+            // From this point the data fetch was successful, the remainder of the do block will execute
+                                      
+            // Asynchronously update the tableview's view
+            // DispatchQueue is used to handle threads
+            DispatchQueue.main.async {
+                // reload the tableview data
+                // reloadData() causes the data source methods to be recalled
+                // the tableview variable was not explicitly defined, however because this class extends the UITableViewController this class also inherits this property
+                self.tableView.reloadData()
+            }
+        } catch {
+            // If the data fetching was NOT successful the catch block will immediately execute
+            // the do-catch block prevents your app from simply crashing and is a method of error handling
+            // For more information on error handling, see the Error Handling section of Apple's Swift Programming Language Guide
+            
+            // print an error message to the console
+            print("Couldn't fetch Data")
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to 
 }
