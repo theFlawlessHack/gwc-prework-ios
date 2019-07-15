@@ -2,7 +2,6 @@
 
 This is an informational app designed to introduce students to Xcode and setting up screens within a storyboard file.
 
-- - - -
 ## Key Lessons
 Within this section, key points to keep in mind to recreate this application.
 
@@ -10,13 +9,17 @@ Within this section, key points to keep in mind to recreate this application.
 Segues are used to create a transition between view controllers. 
 Segues are created within the storyboard file with higher level segue management through code.
 
-To create a segue: 
+<b>To create a segue from button object to controller: </b>
 1. Select the button which will trigger the action for the transition
 2. Hold down the Ctrl button 
 3. While still holding down the Ctrl button drag from the button to the desired transition controller
 4. Release the Ctrl button and the `Manual Segue` Menu will pop up.	
 
-From here, the type of segue to create can be selected from the menu. 
+From here, the type of segue to create can be selected from the menu. <br><br>
+
+<b>To create a segue from one controller to another controller: </b>
+1. Select the yellow circle on the top bar of the view controller and drag to the desired transition controller
+2. Release and the `Manual Segue` Menu will pop up.	
 
 🎉 Yay, you did. 🎉
 To confirm this, you will see an arrow pop up from the button's controller to the desired transition controller. 
