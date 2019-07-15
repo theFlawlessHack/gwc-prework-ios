@@ -32,4 +32,4 @@ Extension topics which will be covered in further detail during the week will be
 Once storyboard objects need to be connected to code a custom controller class will need to be created.
 Custom controller classes allow a tailored in-sync storyboard screen to controller code flow, adding more functionality to the objects and app flow.
 
-Interface Builder Outlets and Actions are covered in futher detail on Day 03
+Interface Builder Outlets and Actions are covered in futher detail on [Day 02](https://github.com/thetealpickle/gwc-student-resources/blob/master/02_RecommendApp/README.md#iboutlets-and-ibactions)
