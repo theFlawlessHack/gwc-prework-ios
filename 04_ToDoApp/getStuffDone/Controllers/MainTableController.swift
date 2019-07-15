@@ -77,7 +77,11 @@ class MainTableController: UITableViewController {
             
             // update the new context state (w/o the deleted Task object) by saving the contexgt directly on the App Delegate                                                               
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                                                                             
+            // remove the Task object from the indexpath.row position from the tasks array                                                              
             self.tasks.remove(at: indexPath.row)
+                                                                             
+            // delete the table view cell of th                                                                
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
