@@ -13,7 +13,8 @@ Index:<br>
 	* Randomization
 	* Optionals
 * Day 3
-	*
+	* Model Layer
+	* Segue Management and Transferring Data Between Screens
 * Day 4
 	*
 * Day 5
