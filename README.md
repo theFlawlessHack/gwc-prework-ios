@@ -5,7 +5,16 @@ This repository has been extended to a student resource complete with detailed c
 
 - - - -
 Index:<br>
+* Day 1
+	* Segues
+	* Custom Controller Class
 * Day 2
 	* IBOutlets and IBActions
 	* Randomization
 	* Optionals
+* Day 3
+	*
+* Day 4
+	*
+* Day 5
+	* 
