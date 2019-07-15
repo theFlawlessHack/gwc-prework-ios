@@ -2,7 +2,6 @@
 
 This is a quiz based app designed to introduce students to managing segues through code and model creation.
 
-- - - -
 ## Key Lessons
 Within this section, key points to keep in mind to recreate this application.
 
