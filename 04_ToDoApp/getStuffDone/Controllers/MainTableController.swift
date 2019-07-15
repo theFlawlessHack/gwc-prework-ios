@@ -9,51 +9,46 @@ import UIKit
 
 // MARK: Introduction
 /*
- The MainTableCotnrller handles the randomizing functionality for this project.
- Setting and randomizing Food Item Images.
+ The MainTableController extends the Table View Controller and handles the displaying of the the data from the persistent Container
  
- This controller is structured by having a list of food items which are the names of the images within the Assests folder.
- The names within the array are randomized and then the returned name is used to create an image.
- This created image is then set as the image for the main image view outlet connection within the storyboard.
+ This controller is structured by having a list of task which is populated by fetching the data from the persistent Container.
+ The data is then shown within the tableview. This controller also extends the method to edit the cell actions.
  */
 class MainTableController: UITableViewController {
 
+    // MARK: Class Variables and Constants
+    // context refers to the context within the App Delegate's persistent container
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    // an array to hold the Task objects 
     var tasks: [Task] = []
     
+    // MARK: Overridden Class Methods
+    // This method is called once the view has loaded
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    // This method is called once the view has appeared
     override func viewDidAppear(_ animated: Bool) {
+        // calling the getData() method
         getData()
     }
 
-    // MARK: - Table view data source
-
+    // MARK: Table view data source
+    // This method defines the number of sections to display within the table view 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
+    // This method defines the number of rows within the sections
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // returning the number of rows within the section as the number of Task from the tasks array
         return tasks.count
     }
     
-    func getData() {
-        do {
-            tasks = try context.fetch(Task.fetchRequest())
-            print(tasks)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } catch {
-            print("Couldn't fetch Data")
-        }
-    }
-
-
+ 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].taskName
@@ -83,33 +78,9 @@ class MainTableController: UITableViewController {
     func editTableRow() {
         
     }
-    
-    /*
-     
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
+ 
+ override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) ->     }
     */
 
     /*
@@ -126,8 +97,5 @@ class MainTableController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        // Pass the selected object to 
 }
