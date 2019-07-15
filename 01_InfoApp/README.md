@@ -19,7 +19,7 @@ From here, the type of segue to create can be selected from the menu. <br><br>
 
 <b>To create a segue from one controller to another controller: </b>
 1. Select the yellow circle on the top bar of the view controller and drag to the desired transition controller
-2. Release and the `Manual Segue` Menu will pop up.	
+2. Release and the `Manual Segue` Menu will pop up.	<br>
 
 🎉 Yay, you did. 🎉
 To confirm this, you will see an arrow pop up from the button's controller to the desired transition controller. 
