@@ -4,8 +4,8 @@ This repository has been extended to a student resource complete with detailed c
 
 
 - - - -
-Index:
-2. Day 2
-	- IBOutlets and IBActions
-	- Randomization
-	- Optionals
+Index:<br>
+* Day 2
+	* IBOutlets and IBActions
+	* Randomization
+	* Optionals
